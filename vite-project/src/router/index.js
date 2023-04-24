@@ -1,11 +1,18 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 const Layout = () => import('@/views/Layout/Layout.vue');
 const Home = () => import('@/views/home/index.vue');
+const Category = () => import('@/views/category/category.vue');
+const CategorySub = () => import('@/views/category/sub/sub.vue');
+
 const routes = [
     {
         path: '/',
         component: Layout,
-        children: [{ path: '/', component: Home }],
+        children: [
+            { path: '/', component: Home },
+            { path: '/category/:id', component: Category },
+            { path: '/category/sub/:id', component: CategorySub },
+        ],
     },
 ];
 

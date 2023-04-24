@@ -4,6 +4,7 @@
             <div class="logo"></div>
             <!-- 头部导航组件 -->
             <appHeaderNav></appHeaderNav>
+            <!-- <appHeaderSticky></appHeaderSticky> -->
             <div class="search df">
                 <n-input class="myInput" type="text" placeholder="搜索一下吧!" clearable>
                     <template #prefix>
@@ -22,6 +23,7 @@
 
 <script setup>
 import appHeaderNav from '../app-header-nav/app-header-nav.vue';
+import appHeaderSticky from '../app-header-sticky/app-header-sticky.vue';
 </script>
 
 <style lang="less" scoped>

@@ -1,7 +1,13 @@
 <template>
-    <div>1231</div>
+    <div class="page-home">
+        <div class="container">
+            <homeCategory></homeCategory>
+        </div>
+    </div>
 </template>
 
-<script setup></script>
+<script setup>
+import homeCategory from '../../components/home-category/home-category.vue';
+</script>
 
 <style lang="less" scoped></style>

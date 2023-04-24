@@ -67,4 +67,5 @@ img {
 /* a标签 */
 a {
     text-decoration: none;
+    color: #333;
 }
