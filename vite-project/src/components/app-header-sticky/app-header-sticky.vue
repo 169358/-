@@ -15,7 +15,6 @@
 import AppHeaderNav from '../app-header-nav/app-header-nav.vue';
 import { useWindowScroll } from '@vueuse/core';
 const { y } = useWindowScroll();
-console.log(y);
 </script>
 
 <style lang="less" scoped>

@@ -76,6 +76,7 @@ const hide = item => {
     opacity: 0;
     box-shadow: 0 0 5px #ccc;
     transition: all 0.2s 0.1s;
+    z-index: 100;
 
     ul {
         display: flex;

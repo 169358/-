@@ -1,12 +1,32 @@
 @blue: #00f;
 // 主题
-@xtxColor:#27BA9B;
+@xtxColor: #27ba9b;
 // 辅助
-@helpColor:#E26237;
+@helpColor: #e26237;
 // 成功
-@sucColor:#1DC779;
+@sucColor: #1dc779;
 // 警告
-@warnColor:#FFB302;
+@warnColor: #ffb302;
 // 价格
-@priceColor:#CF4444;
+@priceColor: #cf4444;
 // 鼠标经过上移阴影动画
+.hoverShadow () {
+    transition: all 0.5s;
+    &:hover {
+        transform: translate3d(0, -3px, 0);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+.fade {
+    &-leave {
+        &-active {
+            position: absolute;
+            width: 100%;
+            transition: opacity 0.5s 0.2s;
+            z-index: 1;
+        }
+        &-to {
+            opacity: 0;
+        }
+    }
+}
