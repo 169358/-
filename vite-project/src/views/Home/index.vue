@@ -15,16 +15,19 @@
         <homeBrand />
         <!-- 家用产品 -->
         <homeProduct />
+        <!-- 最新专题 -->
+        <homeSpecial />
     </div>
 </template>
 
 <script setup>
-import homeCategory from '../../components/home-category/home-category.vue';
+import homeCategory from '../../components/Home/home-category/home-category.vue';
 import homeBanner from '../../components/library/home-banner/home-banner.vue';
-import homeNew from '../../components/home-new/home-new.vue';
-import homeHot from '../../components/home-hot/home-hot.vue';
-import homeBrand from '../../components/home-brand/home-brand.vue';
-import homeProduct from '../../components/home-product/home-product.vue';
+import homeNew from '../../components/Home/home-new/home-new.vue';
+import homeHot from '../../components/Home/home-hot/home-hot.vue';
+import homeBrand from '../../components/Home/home-brand/home-brand.vue';
+import homeProduct from '../../components/Home/home-product/home-product.vue';
+import homeSpecial from '../../components/Home/home-special/home-special.vue';
 </script>
 
 <style lang="less" scoped></style>

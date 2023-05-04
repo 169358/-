@@ -1,11 +1,11 @@
 <script setup>
 //  导航栏组件
-import appTopNav from '../../components/app-topnav/app-topnav.vue';
+import appTopNav from '../../components/App/app-topnav/app-topnav.vue';
 // 头部组件
-import appHeader from '../../components/app-header/app-header.vue';
+import appHeader from '../../components/App/app-header/app-header.vue';
 // 底部组件
-import appFooter from '../../components/app-footer/app-footer.vue';
-import appHeaderSticky from '../../components/app-header-sticky/app-header-sticky.vue';
+import appFooter from '../../components/App/app-footer/app-footer.vue';
+import appHeaderSticky from '../../components/App/app-header-sticky/app-header-sticky.vue';
 import { useStore } from 'vuex';
 const store = useStore();
 store.dispatch('category/getList');

@@ -24,11 +24,11 @@
 </template>
 
 <script setup>
-import homePanel from '../library/home-panel/home-panel.vue';
-import xtxMore from '../library/xtx-more/xtx-more.vue';
+import homePanel from '../../library/home-panel/home-panel.vue';
+import xtxMore from '../../library/xtx-more/xtx-more.vue';
 import homeSkeleton from '../home-skeleton/home-skeleton.vue';
-import { findNew } from '../../api/home';
-import { useLazyData } from '../../hooks/index.js';
+import { findNew } from '../../../api/home';
+import { useLazyData } from '../../../hooks/index.js';
 var goodsList = ref([]);
 const box = ref(null);
 const result = useLazyData(box, findNew);

@@ -72,7 +72,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useStore } from 'vuex';
-import { findAllCategory } from '../../api/home.js';
+import { findAllCategory } from '../../../api/home';
 const store = useStore();
 const brand = reactive({
     id: 'brand',

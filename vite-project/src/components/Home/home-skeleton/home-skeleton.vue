@@ -15,7 +15,7 @@ const props = defineProps({
         default: '#fff',
     },
 });
-import XtxSkeleton from '../library/xtx-skeleton/xtx-skeleton.vue';
+import XtxSkeleton from '../../library/xtx-skeleton/xtx-skeleton.vue';
 </script>
 
 <style lang="less" scoped>

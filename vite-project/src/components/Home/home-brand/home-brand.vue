@@ -47,10 +47,10 @@
 </template>
 
 <script setup>
-import homePanel from '../library/home-panel/home-panel.vue';
-import { findBrand } from '../../api/home';
-import { useLazyData } from '../../hooks/index';
-import xtxSkeleton from '../library/xtx-skeleton/xtx-skeleton.vue';
+import homePanel from '../../library/home-panel/home-panel.vue';
+import { findBrand } from '../../../api/home';
+import { useLazyData } from '../../../hooks/index';
+import xtxSkeleton from '../../library/xtx-skeleton/xtx-skeleton.vue';
 const brands = ref([]);
 const target = ref(null);
 const result = useLazyData(target, findBrand);

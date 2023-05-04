@@ -1,14 +1,11 @@
 <template>
     <div class="goods-item">
         <RouterLink to="/" class="image">
-            <img
-                src="http://zhoushugang.gitee.io/erabbit-client-pc-static/uploads/fresh_goods_1.jpg"
-                alt=""
-            />
+            <img :src="props.data.picture" alt="" />
         </RouterLink>
-        <p class="name ellipsis-2">美威 智利原味三文鱼排 240g/袋 4片装</p>
-        <p class="desc">海鲜年货</p>
-        <p class="price">&yen;108.00</p>
+        <p class="name">{{ props.data.name }}</p>
+        <p class="desc ellipsis">{{ props.data.desc }}</p>
+        <p class="price">&yen;{{ props.data.price }}</p>
         <div class="extra">
             <RouterLink to="/">
                 <span>找相似</span>
@@ -18,7 +15,11 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+    data: Object,
+});
+</script>
 
 <style lang="less" scoped>
 .goods-item {

@@ -32,7 +32,7 @@ import appHeaderSticky from '../app-header-sticky/app-header-sticky.vue';
     .logo {
         width: 200px;
         height: 132px;
-        background: url('../../assets/img/logo.0940ebb5.png') no-repeat center 18px / contain;
+        background: url('../../../assets/img/logo.0940ebb5.png') no-repeat center 18px / contain;
     }
 
     .search {

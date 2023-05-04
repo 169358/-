@@ -33,7 +33,7 @@ const { y } = useWindowScroll();
     .logo {
         width: 200px;
         height: 80px;
-        background: url(../../assets/img/logo.0940ebb5.png) no-repeat right 2px;
+        background: url(../../../assets/img/logo.0940ebb5.png) no-repeat right 2px;
         background-size: 160px auto;
     }
     .right {

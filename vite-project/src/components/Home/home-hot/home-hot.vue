@@ -23,10 +23,10 @@
 </template>
 
 <script setup>
-import homePanel from '../library/home-panel/home-panel.vue';
-import { findHot } from '../../api/home';
+import homePanel from '../../library/home-panel/home-panel.vue';
+import { findHot } from '../../../api/home';
 import homeSkeleton from '../home-skeleton/home-skeleton.vue';
-import { useLazyData } from '../../hooks/index';
+import { useLazyData } from '../../../hooks/index';
 const goodsList = ref([]);
 const box = ref(null);
 const result = useLazyData(box, findHot);

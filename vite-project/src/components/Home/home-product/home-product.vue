@@ -1,32 +1,32 @@
 <template>
     <div class="home-product">
-        <div class="container">
+        <div class="container" v-for="(item, index) in goodsList" :key="index">
             <div class="head df">
-                <h3>居家</h3>
+                <h3>{{ item.name }}</h3>
                 <div class="right df">
                     <div class="product-list">
-                        <router-link to="/">茶咖酒具</router-link>
-                        <router-link to="/">茶咖酒具</router-link>
-                        <router-link to="/">茶咖酒具</router-link>
-                        <router-link to="/">茶咖酒具</router-link>
+                        <router-link
+                            to="/"
+                            v-for="(child, index) in item.children.slice(0, 4)"
+                            :key="child.id"
+                        >
+                            {{ child.name }}
+                        </router-link>
                     </div>
                 </div>
                 <xtxMore></xtxMore>
             </div>
             <div class="box">
                 <RouterLink class="cover" to="/">
-                    <img
-                        src="http://zhoushugang.gitee.io/erabbit-client-pc-static/uploads/fresh_goods_cover.jpg"
-                        alt=""
-                    />
+                    <img :src="item.picture" alt="" />
                     <strong class="label">
-                        <span>生鲜馆</span>
-                        <span>全场3件7折</span>
+                        <span>{{ item.name }}馆</span>
+                        <span class="ellipsis">{{ item.saleInfo }}</span>
                     </strong>
                 </RouterLink>
                 <ul class="goods-list">
-                    <li v-for="i in 8" :key="i">
-                        <HomeGoods />
+                    <li v-for="i in item.goods" :key="i">
+                        <HomeGoods :data="i" />
                     </li>
                 </ul>
             </div>
@@ -35,11 +35,12 @@
 </template>
 
 <script setup>
-import { findGoods } from '../../api/home.js';
+import { findGoods } from '../../../api/home.js';
 // import xtxMore from '../library/xtx-more/xtx-more.vue';
-
+const goodsList = ref([]);
 findGoods().then(res => {
-    console.log(res.result);
+    // console.log(res.result);
+    goodsList.value = res.result;
 });
 </script>
 
